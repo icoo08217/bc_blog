@@ -1,7 +1,17 @@
 module.exports = {
   siteMetadata: {
-    title: `BC blog`,
-    siteUrl: `https://www.yourdomain.tld`,
+    title: "요호호",
   },
-  plugins: [],
-}
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
+      },
+    },
+    "gatsby-plugin-mdx",
+  ],
+};
